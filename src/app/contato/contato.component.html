@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mt-5">
+            <div class="card">
+                
+                <div class="card-body">
+                    <a class="btn btn-success float-right" href="/contato/create">Cadastrar</a>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Nome</th>
+                              <th scope="col">Telefone</th>
+                              <th scope="col">E-mail</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let contato of contatos">
+                                    <td>
+                                        <a type="button" class="btn btn-sm btn-primary" href="/contato/{{ contato._id }}/edit">Editar</a>
+                                        <button type="button" class="btn btn-sm btn-danger" (click)="delete(contato._id)" >Editar</button>
+                                    </td>
+                                    <td>{{ contato.nome }}</td>
+                                    <td>{{ contato.telefone }}</td>
+                                    <td>{{ contato.email }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
