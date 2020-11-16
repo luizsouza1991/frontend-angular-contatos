@@ -19,7 +19,7 @@
                                 <tr *ngFor="let contato of contatos">
                                     <td>
                                         <a type="button" class="btn btn-sm btn-primary" href="/contato/{{ contato._id }}/edit">Editar</a>
-                                        <button type="button" class="btn btn-sm btn-danger" (click)="delete(contato._id)" >Editar</button>
+                                        <button type="button" class="btn btn-sm btn-danger" (click)="delete(contato._id)" >Excluir</button>
                                     </td>
                                     <td>{{ contato.nome }}</td>
                                     <td>{{ contato.telefone }}</td>
