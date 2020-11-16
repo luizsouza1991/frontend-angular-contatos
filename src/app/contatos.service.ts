@@ -19,6 +19,7 @@ export class ContatosService {
   }
 
   update(data:any, url:string) {
+    console.log(data);
     return this.http.put(url,data);
   }
 

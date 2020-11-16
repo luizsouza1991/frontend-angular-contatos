@@ -65,6 +65,11 @@ export class ContatosFormComponent implements OnInit {
     })
   }
 
+
+  getTelefoneMask(): string{
+    return '(00) 00000-0000';
+  }
+
   edit(id: any) {
       this.contatoService.edit(id).subscribe(response => {
       const {contato}:any = response;
