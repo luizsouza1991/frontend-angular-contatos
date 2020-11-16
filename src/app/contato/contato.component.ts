@@ -29,6 +29,7 @@ export class ContatoComponent implements OnInit {
   delete(id:string) {
       this.contatosService.destroy(id).subscribe(response => {
         console.log(response)
+        window.location.href = 'http://localhost:4200/contatos'
       }, err => {
         console.log(err)
       })
